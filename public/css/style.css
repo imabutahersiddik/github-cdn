@@ -3,6 +3,6 @@
 .f-s {
   font-size: 9px; 
 }
-button.mr.btn.btn-primary {
+button.btn.btn-primary.mr {
     margin: 0px auto;
 }
