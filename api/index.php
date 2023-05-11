@@ -52,7 +52,7 @@ echo '<form method="post">
           <label for="inputLink" class="form-label">Github File Link</label>
           <input type="text" class="form-control" id="inputLink" name="link">
         </div>
-        <button type="submit" class="btn btn-primary">Copy CDN Link</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".modal">Get CDN Link</button>
       </form>';
 
 require_once __DIR__ . '/../src/footer.php';
