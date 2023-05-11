@@ -57,8 +57,6 @@ echo <<<EOT
     <li>Lower bandwidth costs for your server</li>
   </ul>
   <p>So why wait? Start generating your CDN links today!</p>
-  
-  <button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy Link</button>
   </form>
 EOT;
 
