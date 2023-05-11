@@ -67,7 +67,10 @@ require_once(__DIR__ . '/../vendor/autoload.php');
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about.php">About</a>
+            <a class="nav-link" href="https://www.kiask.xyz/?githubcdn">AI Search Engine & Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://decentralized-web.kiask.xyz/?githubcdn">Decentralized Web</a>
           </li>
         </ul>
       </div>
