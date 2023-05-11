@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Display form and errors
-require_once __DIR__ . '/../components/header.php';
+require_once __DIR__ . '/../src/header.php';
 
 if (!empty($errors)) {
   echo '<div class="alert alert-danger">';
@@ -55,5 +55,5 @@ echo '<form method="post">
         <button type="submit" class="btn btn-primary">Copy CDN Link</button>
       </form>';
 
-require_once __DIR__ . '/../components/footer.php';
+require_once __DIR__ . '/../src/footer.php';
 
