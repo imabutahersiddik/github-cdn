@@ -24,7 +24,7 @@ require_once(__DIR__ . '/../vendor/autoload.php');
   <style>
    /* In an external CSS file or within <style> tags in the header */
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
