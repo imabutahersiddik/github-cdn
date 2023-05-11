@@ -10,9 +10,41 @@ require_once(__DIR__ . '/../vendor/autoload.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Github CDN Link Generation Tool</title>
+
+  <!-- SEO meta tags -->
+  <meta name="description" content="Generate CDN links for your Github projects with ease.">
+  <meta name="keywords" content="Github, CDN, link generation, tool">
+
+  <!-- Social cards -->
+  <meta property="og:title" content="Github CDN Link Generation Tool">
+  <meta property="og:description" content="Generate CDN links for your Github projects with ease.">
+  <meta property="og:image" content="https://cdn.kiask.com/images/github-cdn-link-generation-tool.png">
+  <meta property="twitter:card" content="summary_large_image">
+
+  <!-- Schema markup -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebApplication",
+      "name": "Github CDN Link Generation Tool",
+      "description": "Generate CDN links for your Github projects with ease.",
+      "url": "https://github-cdn.kiask.xyz/",
+      "image": "https://cdn.kiask.xyz/github-cdn/images/github-cdn-link-generation-tool.png",
+      "applicationCategory": "Web Development",
+      "operatingSystem": "Web"
+    }
+  </script>
+
+  <!-- CSS stylesheet -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JavaScript library -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- Script for copying link -->
   <script>
     function copyLink() {
       var copyText = document.getElementById("modalLink");
