@@ -23,7 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $filePath = implode('/', array_slice($pathParts, 4));
     $cdnLink = "https://cdn.jsdelivr.net/gh/$username/$repository@$filePath";
 
-    
+     }
+}
+
 
 // Display form and errors
 require_once __DIR__ . '/../src/header.php';
@@ -58,8 +60,7 @@ echo '<form method="post">
     echo '<p>CDN link:</p><input type="text" class="form-control" id="cdnLinkInput" value="' . $cdnLink . '" readonly></div>';
     echo '<button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy Link</button>';
     echo '</div>';
-  }
-}
+  
 
 require_once __DIR__ . '/../src/footer.php';
 
