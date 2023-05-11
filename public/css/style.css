@@ -68,6 +68,10 @@
   opacity: 1;
 }
 
+.f-s {
+  font-size: 9px; 
+}
+
 /* Footer styling */
 
 footer {
