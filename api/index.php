@@ -18,9 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $cdnLink = 'https://cdn.jsdelivr.net/gh/' . parse_url($link, PHP_URL_PATH);
 
-    // Display CDN link after form submission if link is valid
+    // Display CDN link and "Copy Link" button after form submission if link is valid
     echo '<div class="alert alert-success">';
-    echo '<p>CDN link:</p><input type="text" class="form-control" value="' . $cdnLink . '" readonly>';
+    echo '<p>CDN link:</p><input type="text" class="form-control" id="cdnLinkInput" value="' . $cdnLink . '" readonly>';
+    echo '<br>';
+    echo '<button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy Link</button>';
     echo '</div>';
   }
 }
@@ -45,3 +47,15 @@ echo '<form method="post">
       </form>';
 
 require_once __DIR__ . '/../src/footer.php';
+
+?>
+
+<!-- script to copy CDN link to clipboard -->
+<script>
+function copyCdnLink() {
+  const cdnLinkInput = document.getElementById("cdnLinkInput");
+  cdnLinkInput.select();
+  cdnLinkInput.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+}
+</script>
