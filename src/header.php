@@ -73,5 +73,3 @@ require_once(__DIR__ . '/../vendor/autoload.php');
       </div>
     </div>
   </nav>
-
-  <div class="container mt-4 mb-4">
