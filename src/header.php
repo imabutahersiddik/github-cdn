@@ -21,17 +21,49 @@ require_once(__DIR__ . '/../vendor/autoload.php');
       document.execCommand("copy");
     }
   </script>
+  <style>
+   /* In an external CSS file or within <style> tags in the header */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-bottom: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1px;
+}
+
+.navbar-toggler:focus .navbar-icon-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-toggler:hover .navbar-icon-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Github CDN Link Generator</a>
-      <button class="navbar-toggler" type="button" id="menuToggle">
-        <span class="navbar-toggler-icon"></span>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">CDN Link Generator</a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menuContainer">
+        <span class="navbar-icon-bar"></span>
+        <span class="navbar-icon-bar"></span>
+        <span class="navbar-icon-bar"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="menuContainer">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
