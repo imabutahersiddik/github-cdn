@@ -1,4 +1,5 @@
 <?php
+
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -16,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     curl_close($ch);
 
     $cdnLink = 'https://cdn.jsdelivr.net/gh/' . parse_url($link, PHP_URL_PATH);
-    
-    echo '<div class="modal">
+
+    echo '<div class="modal fade" tabindex="-1" id="cdnModal">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -33,6 +34,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </div>
             </div>
           </div>';
+
+    echo '<script>
+            function copyLink() {
+              var copyText = document.getElementById("modalLink");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              document.execCommand("copy");
+            }
+
+            $(document).ready(function() {
+              $("#cdnModal").modal("show");
+            });
+          </script>';
   }
 }
 
