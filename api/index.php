@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (empty($link)) {
     $errors[] = 'Please enter a Github file link';
-  } else if (!preg_match('/^https:\/\/github.com\/.*\.(js|css|json)$/', $link)) {
+  } else if (!preg_match('/^https:\/\/github.com\/.*\.(js|css|json|html|htm|py|java|php|rb|cs|cpp|cxx|cc|swift|kt|kts|ts|tsx|go|rs|lua|scala|dart|sh|bash|ps1|pl|sql|yaml|yml|xml|md|r|rmd|m|coffee|haml|sass|scss|less|styl|stylus|vue|swift)$/', $link)) {
     $errors[] = 'Please enter a valid Github file link ending with .js or .css';
   } else {
     $ch = curl_init();
