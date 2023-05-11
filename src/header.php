@@ -54,24 +54,24 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 
 <body>
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">CDN Link Generator</a>
-
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menuContainer">
-        <span class="navbar-icon-bar"></span>
-        <span class="navbar-icon-bar"></span>
-        <span class="navbar-icon-bar"></span>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Github CDN Link Generator</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuContainer" aria-controls="menuContainer" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="menuContainer">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/about.php">About</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div class="container mt-4 mb-4">
+  <div class="container mt-4 mb-4">
