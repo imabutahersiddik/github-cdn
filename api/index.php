@@ -16,7 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fileContents = curl_exec($ch);
     curl_close($ch);
 
-    $cdnLink = 'https://cdn.jsdelivr.net/gh/' . parse_url($link, PHP_URL_PATH);
+    $parsedUrl = parse_url($link);
+    $pathParts = explode('/', $parsedUrl['path']);
+    $username = $pathParts[1];
+    $repository = $pathParts[2];
+    $filePath = implode('/', array_slice($pathParts, 4));
+    $cdnLink = "https://cdn.jsdelivr.net/gh/$username/$repository@$filePath";
 
     // Display CDN link and "Copy Link" button after form submission if link is valid
     echo '<div class="alert alert-success">';
