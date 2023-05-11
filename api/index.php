@@ -18,35 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $cdnLink = 'https://cdn.jsdelivr.net/gh/' . parse_url($link, PHP_URL_PATH);
 
-    echo '<div class="modal fade" tabindex="-1" id="cdnModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">CDN Link</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                  <input type="text" class="form-control" id="modalLink" value="' . $cdnLink . '" readonly>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" onclick="copyLink()">Copy Link</button>
-                </div>
-              </div>
-            </div>
-          </div>';
-
-    echo '<script>
-            function copyLink() {
-              var copyText = document.getElementById("modalLink");
-              copyText.select();
-              copyText.setSelectionRange(0, 99999);
-              document.execCommand("copy");
-            }
-
-            $(document).ready(function() {
-              $("#cdnModal").modal("show");
-            });
-          </script>';
+    // Display CDN link after form submission if link is valid
+    echo '<div class="alert alert-success">';
+    echo '<p>CDN link:</p><input type="text" class="form-control" value="' . $cdnLink . '" readonly>';
+    echo '</div>';
   }
 }
 
@@ -66,8 +41,7 @@ echo '<form method="post">
           <label for="inputLink" class="form-label">Github File Link</label>
           <input type="text" class="form-control" id="inputLink" name="link">
         </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".modal">Get CDN Link</button>
+        <button type="submit" class="btn btn-primary">Get CDN Link</button>
       </form>';
 
 require_once __DIR__ . '/../src/footer.php';
-
