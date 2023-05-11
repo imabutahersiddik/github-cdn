@@ -82,6 +82,12 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 .navbar-toggler:hover .navbar-icon-bar {
   background-color: rgba(0, 0, 0, 0.7);
 }
+.f-s {
+  font-size: 9px; 
+}
+.btn.btn-primary.mr {
+    margin: 0px auto;
+}
   </style>
 </head>
 
