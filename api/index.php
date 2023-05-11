@@ -25,8 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Display CDN link and "Copy Link" button after form submission if link is valid
     echo '<div class="alert alert-success">';
-    echo '<p>CDN link:</p><input type="text" class="form-control" id="cdnLinkInput" value="' . $cdnLink . '" readonly>';
-    echo '<br>';
+    echo '<p>CDN link:</p><input type="text" class="form-control" id="cdnLinkInput" value="' . $cdnLink . '" readonly></div>';
     echo '<button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy Link</button>';
     echo '</div>';
   }
@@ -48,8 +47,20 @@ echo '<form method="post">
           <label for="inputLink" class="form-label">Github File Link</label>
           <input type="text" class="form-control" id="inputLink" name="link">
         </div>
-        <button type="submit" class="btn btn-primary">Get CDN Link</button>
-      </form>';
+        <button type="submit" class="btn btn-primary">Get CDN Link</button>';
+echo <<<EOT
+  <h2>Easy CDN Link Generation Tool</h2>
+  <p>Use this tool to quickly generate a CDN link for any JavaScript or CSS file on GitHub. Simply paste the link to the file you want to use, and we'll do the rest. Why use a CDN? A CDN (content delivery network) can provide many benefits, including:</p>
+  <ul>
+    <li>Faster pageload times for visitors to your website</li>
+    <li>Better scalability during periods of high traffic</li>
+    <li>Lower bandwidth costs for your server</li>
+  </ul>
+  <p>So why wait? Start generating your CDN links today!</p>
+  
+  <button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy Link</button>
+  </form>
+EOT;
 
 require_once __DIR__ . '/../src/footer.php';
 
