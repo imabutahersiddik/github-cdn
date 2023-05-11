@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cdnLink = "https://cdn.jsdelivr.net/gh/$username/$repository@$filePath";
 
     // Display CDN link and "Copy Link" button after form submission if link is valid
-    echo '<div class="alert alert-success">';
+    echo '<div class="alert alert-success mt-4 mb-4">';
     echo '<p>CDN link:</p><input type="text" class="form-control" id="cdnLinkInput" value="' . $cdnLink . '" readonly></div>';
     echo '<button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy Link</button>';
     echo '</div>';
@@ -33,6 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // Display form and errors
 require_once __DIR__ . '/../src/header.php';
+
+echo <<<EOT
+  <div class="container mt-4 mb-4">
+    <h2 class="text-center mb-4">Easy CDN Link Generation Tool</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+EOT;
 
 if (!empty($errors)) {
   echo '<div class="alert alert-danger">';
@@ -47,18 +54,10 @@ echo '<form method="post">
           <label for="inputLink" class="form-label">Github File Link</label>
           <input type="text" class="form-control" id="inputLink" name="link">
         </div>
-        <button type="submit" class="btn btn-primary">Get CDN Link</button>';
-echo <<<EOT
-  <h2>Easy CDN Link Generation Tool</h2>
-  <p>Use this tool to quickly generate a CDN link for any JavaScript or CSS file on GitHub. Simply paste the link to the file you want to use, and we'll do the rest. Why use a CDN? A CDN (content delivery network) can provide many benefits, including:</p>
-  <ul>
-    <li>Faster pageload times for visitors to your website</li>
-    <li>Better scalability during periods of high traffic</li>
-    <li>Lower bandwidth costs for your server</li>
-  </ul>
-  <p>So why wait? Start generating your CDN links today!</p>
-  </form>
-EOT;
+        <button type="submit" class="btn btn-primary">Get CDN Link</button>
+     </form>
+    </div>
+  </div>';
 
 require_once __DIR__ . '/../src/footer.php';
 
@@ -73,3 +72,16 @@ function copyCdnLink() {
   document.execCommand("copy");
 }
 </script>
+
+<style>
+  .container {
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px;
+  }
+
+  .btn-primary {
+    margin-top: 20px;
+  }
+</style>
