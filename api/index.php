@@ -60,7 +60,7 @@ echo '<form method="post">
 if ($cdnGenerated) {
   echo '<div class="alert alert-success mt-4 mb-4">';
   echo '<p>CDN link:</p><input type="text" class="form-control" id="cdnLinkInput" value="' . $cdnLink . '" readonly></div>';
-  echo '<button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy Link</button>';
+  echo '<button type="button" class="btn btn-primary" onclick="copyCdnLink()">Copy to Clipboard</button>';
   echo '</div>';
 }
 
