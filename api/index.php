@@ -46,12 +46,12 @@ if (!empty($errors)) {
   echo '</div>';
 }
 
-echo '<form method="post">
+echo '<form class="text-center" method="post">
         <div class="mb-3">
           <label for="inputLink" class="form-label">Github File Link</label>
           <input type="text" class="form-control" id="inputLink" name="link">
         </div>
-        <button type="submit" class="text-center btn btn-primary">Get CDN Link</button>
+        <button type="submit" class="btn btn-primary">Get CDN Link</button>
      </form>
     </div>
   </div>';
