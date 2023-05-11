@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if (empty($link)) {
     $errors[] = 'Please enter a Github file link';
-  } else if (!preg_match('/^https:\/\/github.com\/.*\.(js|css)$/', $link)) {
+  } else if (!preg_match('/^https:\/\/github.com\/.*\.(js|css|json)$/', $link)) {
     $errors[] = 'Please enter a valid Github file link ending with .js or .css';
   } else {
     $ch = curl_init();
