@@ -43,6 +43,16 @@ The generated link will be displayed on the page, and you can copy it to your cl
 - jQuery
 - PHP
 
+## Supporting This Work
+
+If you find this tool helpful and would like to support its development, you can do so in the following ways:
+
+- [Become a patron on Patreon](https://patreon.com/KiasK?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link)
+- Send cryptocurrency to the following address:
+  - Ethereum, USDT, BUSD: 0x7c13a89b8E192e635ac24179B8DA6cC77101C651
+
+Your support is greatly appreciated and will help fund the ongoing development and supporting its developers.
+
 ## Contributions
 
 Contributions to this project are welcome. If you find a bug or have a feature suggestion, please open an issue on this GitHub repository. If you'd like to contribute code, please submit a pull request.
