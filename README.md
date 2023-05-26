@@ -49,6 +49,8 @@ If you find this tool helpful and would like to support its development, you can
 
 - [Become a patron on Patreon](https://patreon.com/KiasK?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link)
 - Send cryptocurrency to the following address:
+  - Bitcoin: 
+  - Litecoin:
   - Ethereum, USDT, BUSD: 0x7c13a89b8E192e635ac24179B8DA6cC77101C651
 
 Your support is greatly appreciated and will help fund the ongoing development and supporting its developers.
@@ -59,4 +61,4 @@ Contributions to this project are welcome. If you find a bug or have a feature s
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+This project is licensed under the [The Unlicense](https://unlicense.org/).
