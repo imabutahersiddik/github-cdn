@@ -44,6 +44,8 @@ require_once(__DIR__ . '/../vendor/autoload.php');
 
   <!-- Bootstrap JavaScript library -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+  
+  <script defer src="https://github-cdn-one.vercel.app/_vercel/insights/script.js"></script>
 
   <!-- Script for copying link -->
   <script>
